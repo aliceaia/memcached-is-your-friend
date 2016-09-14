@@ -1,6 +1,7 @@
-# MemcacheD Is Your Friend - Memcached Support for WordPress #
+# Memcached Is Your Friend - Memcached Support for WordPress #
 ==============================
 
+Forked from Original to include fixes that causes plugins to crash and PHP loops
 
 Adds memcached object cache support to WordPress.  Detects either the PECL Memecache or PECL Memcached (Memcached preferred)
 class and uses the appropriate interface.  You don't need to figure out which class is available in your installation.
