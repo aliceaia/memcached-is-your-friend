@@ -114,16 +114,14 @@ function wordpress_memcached_get_stats() {
 
 
 class WP_Object_Cache {
-	private $global_groups = array();
-
-	private $no_mc_groups = array();
-
-	private $cache = array();
-	private $mc = array();
-	private $stats = array( 'add' => 0, 'delete' => 0, 'get' => 0, 'get_multi' => 0, );
-	private $group_ops = array();
-
-	private $cache_enabled = true;
+	public $global_groups = array(); // (was private)
+        public $no_mc_groups = array(); // (was private)
+        public $cache = array(); // (was private)
+        public $mc = array(); // (was private)
+        public $stats = array( 'add' => 0, 'delete' => 0, 'get' => 0, 'get_multi' => 0, ); // (was private)
+        public $group_ops = array(); // (was private)
+        public $memcache_debug = array(); // added for ElasticPress compatibility
+        public $cache_enabled = true; // modified to allow wordpress to properly disable object cache in wp-activate.php +22 (was private)
 	private $default_expiration = 0;
 
 	function add( $id, $data, $group = 'default', $expire = 0 ) {
