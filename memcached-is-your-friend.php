@@ -212,7 +212,7 @@ function wordpress_memcached_support_set_admin_notice( $notice = false ) {
 function wordpress_memcached_support_show_admin_notice() {
 	$wordpress_memcached_support_notice = get_option( 'wordpress_memcached_support_notice', '' );
 	if ( ! empty( $wordpress_memcached_support_notice ) ) {
-		$class = ( strpos( $wordpress_memcached_support_notice, 'ERROR' ) === false ) ? 'updated' : 'error';
+		$class = ( strpos( $wordpress_memcached_support_notice, 'ERROR' ) === false ) ? 'notice notice-success is-dismissible' : 'notice notice-error is-dismissible';
 		?>
 		<div class="<?php echo $class; ?>">
 			<p><?php echo $wordpress_memcached_support_notice; ?></p>
