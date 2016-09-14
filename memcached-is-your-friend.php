@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: MemcacheD Is Your Friend Updated
-Description: Memcached via PHP Memcache or Memcached Class Support for WordPress
+Plugin Name: Memcached Is Your Friend Updated
+Description: Memcached via PHP Memcache or Memcached Class Support for WordPress with fixes for compatibility
 Version: 2.1.0
 Plugin URI: http://wordpress.org/extend/plugins/memcached-is-your-friend//
 Author: WP Bullet forked from Jeffrey Schutzman - - uses code from Ryan Boren, Denis de Bernardy, Matt Martz, Mike Schroder, Scott Taylor
