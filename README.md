@@ -49,6 +49,14 @@ $memcached_servers = array(
 );
 ```
 
+### How can I use unix sockets with memcached server(s)? ###
+
+Add something similar like this near the top of the wp-config.php
+```
+$memcached_servers = array( 'default' => array(
+        '/var/run/memcached/memcached.sock:0')
+);
+```
 
 ## Changelog ##
 
