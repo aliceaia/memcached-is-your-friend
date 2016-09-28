@@ -43,6 +43,8 @@ function wordpress_memcached_support_activate() {
 	}
 
 	// Activation code here...
+	// Flush object cache to prevent issues
+	wp_cache_flush();
 	$last_activated_version = get_option( 'wordpress_memcached_support_version', '0.0' );
 
 	if ( WORDPRESS_MEMCACHED_SUPPORT_VERSION == $last_activated_version ) {
