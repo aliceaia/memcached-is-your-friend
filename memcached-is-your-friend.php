@@ -43,7 +43,7 @@ function wordpress_memcached_support_activate() {
 	}
 
 	// Activation code here...
-	// Flush object cache to prevent issues
+	// Flush object cache to prevent issues when updating core
 	wp_cache_flush();
 	$last_activated_version = get_option( 'wordpress_memcached_support_version', '0.0' );
 
@@ -135,6 +135,8 @@ register_activation_hook( __FILE__, 'wordpress_memcached_support_activate' );
 function wordpress_memcached_support_deactivate() {
 
 	// Deactivation code here...
+	// flush object cache to prevent core update loops
+	wp_cache_flush();
 	delete_option( 'wordpress_memcached_support_version' );
 
 	$distribution_object_cache_file_path = plugin_dir_path( __FILE__ ) . 'object-cache.php';
